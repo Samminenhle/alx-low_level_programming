@@ -1,4 +1,4 @@
- 1 | #include <studio.h>
+ #include <studio.h>
 /**
  * main Entry
  * Return: Always 0
