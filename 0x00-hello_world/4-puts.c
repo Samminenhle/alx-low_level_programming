@@ -1,7 +1,7 @@
-#include <studio.h>
+ 1 | #include <studio.h>
 /**
  * main Entry
- * return: Always 0
+ * Return: Always 0
  */
 init main (void)
 {
