@@ -3,6 +3,7 @@
 /**
  * main - prints the alphabets in lower cases
  *
+ * Description: 'prototype'
  */
 void print_alphabet(void)
 {
