@@ -4,7 +4,7 @@
  * main - prints 10x the alphabets in lower case
  *
  */
-void print_alphabet_10x(void)
+void print_alphabet_x10(void)
 {
 	int ten;
 	char la;
