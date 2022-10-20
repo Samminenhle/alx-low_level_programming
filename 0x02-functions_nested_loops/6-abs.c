@@ -6,7 +6,7 @@
  * @y: the integer to be computed
  * Return: The absolute number
  */
-int main(void)
+int _abs(int y)
 {
 	if (y >= 0)
 		return (y);
