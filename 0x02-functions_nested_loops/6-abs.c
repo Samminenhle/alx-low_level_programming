@@ -1,9 +1,15 @@
-#include <main.h>
+#include "main.h"
 
 /**
- * main - prints a function that computes the absolute value of an integer
+ * int _abs(int) - computes the absolute value of an integer
  *
- * Return: Always 0
+ * @y: the integer
+ * Return: The absolute number
  */
 int main(void)
 {
+	if (y >= 0)
+		return (y);
+	else
+		return (-y);
+}
