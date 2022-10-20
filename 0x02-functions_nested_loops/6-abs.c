@@ -8,8 +8,8 @@
  */
 int main(void)
 {
-	if (y >= 0)
-		return (y);
+	if (t >= 0)
+		return (t);
 	else
-		return (-y);
+		return (-t);
 }
