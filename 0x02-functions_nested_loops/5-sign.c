@@ -10,6 +10,9 @@
  */
 int print_sign(int n)
 {
+	int r;
+	r = print_sign(98);
+
 	if (n > 0)
 	{
 		_putchar('+');
