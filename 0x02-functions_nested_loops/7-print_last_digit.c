@@ -1,9 +1,19 @@
-#include <main.h>
+#include "main.h"
 
 /**
- * main - print function that wirtes the last digit of a number
+ * int print_last_digit(int) - print function that wirtes the last digit of a number
  *
- * Return: Always 0
+ * @n: the number
+ * Return: the value of last digit
  */
-int main(void)
+int print_last_digit(int)
 {
+	int ld = n % 10;
+
+	if (ld < 0)
+		ld*= -1;
+
+	-putchar(ld + '0')
+
+		return (0);
+}
