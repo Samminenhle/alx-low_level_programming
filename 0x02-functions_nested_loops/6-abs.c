@@ -3,13 +3,13 @@
 /**
  * int _abs(int) - computes the absolute value of an integer
  *
- * @y: the integer
+ * @y: the integer to be computed
  * Return: The absolute number
  */
 int main(void)
 {
-	if (t >= 0)
-		return (t);
+	if (y >= 0)
+		return (y);
 	else
-		return (-t);
+		return (-y);
 }
