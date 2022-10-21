@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_line - draws a straight line in the terminal
+ * print_line - draws a straight line in the terminal using '_'
  *
  * @n: the number of '_' to be printed
  * Rertun: Always 0
@@ -16,5 +16,5 @@ void print_line(int n)
 			_putchar('_');
 	}
 
-	_putchsr('\n');
+	_putchar('\n');
 }
