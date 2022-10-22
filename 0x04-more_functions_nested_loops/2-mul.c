@@ -3,11 +3,11 @@
 /**
  * _mul - function that multiplies two integers
  *
- * @x: first int
- * @y: second int
- * Return: multiplication of x and y
+ * @a: first int
+ * @b: second int
+ * Return: multiplication of a and b
  */
-int mul(int x, int y)
+int mul(int a, int b)
 {
-	return (x * y);
+	return (a * b);
 }
