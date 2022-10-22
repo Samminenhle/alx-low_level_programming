@@ -8,7 +8,7 @@
  */
 void print_triangle(int size)
 {
-	int column, line, angles;
+	int row, hashes, spaces
 
 	if (size <= 0)
 	{
@@ -16,13 +16,13 @@ void print_triangle(int size)
 	}
 	else
 	{
-		for (column = 1; column <= size; column++)
+		for (row = 1; row <= size; row++)
 		{
-			for (angles = size - column; angles >= 1; angles--)
+			for (spaces = size - row; spaces >= 1; spaces--)
 			{
 				_putchar(' ');
 			}
-			for (line = 1; line <= column; line++)
+			for (hashes = 1; hashes <= row; hashes++)
 			{
 				_putchar('#');
 			}
