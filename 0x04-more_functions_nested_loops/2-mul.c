@@ -3,8 +3,8 @@
 /**
  * _mul - function that multiplies two integers
  *
- * @x: int one
- * @y: int two
+ * @x: first int
+ * @y: second int
  * Return: multiplication of x and y
  */
 int mul(int x, int y)
