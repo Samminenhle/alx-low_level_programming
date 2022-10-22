@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isupper(int c) - checks for upercase character
+ * _isupper - checks for upercase character
  *
  * @c: characterto be checked
  * Return: 1 if c is uppercas, 0 otherwise
