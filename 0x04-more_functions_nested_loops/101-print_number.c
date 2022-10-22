@@ -4,11 +4,10 @@
  * print_number -function that prints and integer
  *
  * @n: an input integer character
- * Return: Always 0
  */
 void print_number(int n)
 {
-	unsigned int i = n;
+	int i = n;
 
 	if (n < 0)
 	{
