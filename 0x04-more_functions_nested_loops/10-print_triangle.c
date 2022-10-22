@@ -1,31 +1,32 @@
 #include "main.h"
 
 /**
- * print_triangle - prints a triangle followed by a new line
+ * print_triangle - print a triangle followed by a new line
  *
- * @n:size of the triangle
+ *@size: size of the triangle
+ *Return: Alwys 0
  */
 void print_triangle(int size)
 {
-	int h, tri
+	int column, line, angles;
 
-	if (n > 0)
+	if (size <= 0)
 	{
-		for (h = 1; h <= h++)
+		_putchar('\n');
+	}
+	else
+	{
+		for (column = 1; column <= size; column++)
 		{
-			for (tri = n - h; tri > 0; tri--)
-
+			for (angles = size - column; angles >= 1; angles--)
+			{
 				_putchar(' ');
-
-			for (tri = 0; tri < h; tri++)
+			}
+			for (line = 1; line <= column; line++)
+			{
 				_putchar('#');
-
-			if (h == n)
-				continue;
-
-			_putchar('\n');
+			}
+			_putchar('#');
 		}
 	}
-
-	_putchar('\n');
 }
