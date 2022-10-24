@@ -1,18 +1,18 @@
 #include <stdio.h>
 
 /**
- *main - print alp
+ *main - print alphabets in lowercase except for q and e
  *
  * Return: Always 0
  */
 int mai(void)
 {
-	char letter;
+	char la;
 
-	for (letter = 'a'; letter <= 'z'; letter++)
+	for (la = 'a'; la <= 'z'; la++)
 	{
-		if (letter != 'e' && letter != 'q')
-			putchar(letter);
+		if (la != 'e' && la != 'q')
+			putchar(la);
 	}
 
 	putchar('\n');
