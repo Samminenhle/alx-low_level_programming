@@ -2,6 +2,7 @@
 
 /**
  * main -  prints all possible different combinations of three digits
+ * and numbers should be printed in ascending order, with three digits
  *
  *Return: Always 0
  */
