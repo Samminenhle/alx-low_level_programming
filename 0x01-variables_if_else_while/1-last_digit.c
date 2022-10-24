@@ -4,19 +4,20 @@
 
 /**
  * main - assign a random number to the variable n each time it is executed
+ * and print the last digit of the number stored in the variable n
  *
- * Return: Always 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int a;
+	int n;
 	int b;
 
 	srand(time(0));
-	a = rand() - RAND_MAX / 2;
+	n = rand() - RAND_MAX / 2;
 
-	b = a % 10;
-	printf("Last digit of %d is %d ", a, b);
+	b = n % 10;
+	printf("Last digit of %d is %d ", n, b);
 	if (b > 5)
 	{
 		printf("and is greater than 5");
