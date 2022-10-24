@@ -4,7 +4,7 @@
  * main -  prints all possible different combinations of three digits
  * and numbers should be printed in ascending order, with three digits
  *
- *Return: Always 0
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -20,7 +20,7 @@ int main(void)
 				putchar((digit2 % 10) + '0');
 				putchar((digit3 % 10) + '0');
 
-				for (digit1 == 7 && digit2 == 8 && digit3 == 9)
+				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
 					continue;
 				putchar(',');
 				putchar(' ');
