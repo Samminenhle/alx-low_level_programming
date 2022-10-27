@@ -5,7 +5,7 @@
  * @dest: character to
  * @scr: character from
  *
- * Return: Character
+ * Return: Char
  */
 char *_strncat(char *dest, char *src, int n)
 {
