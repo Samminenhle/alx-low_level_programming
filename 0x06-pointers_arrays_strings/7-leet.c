@@ -6,6 +6,7 @@
  *
  * Return: the value of s
  */
+
 char *leet(char *s)
 {
 	int i, j;
@@ -14,7 +15,7 @@ char *leet(char *s)
 
 	for (i = 0; *(s + i); i++)
 	{
-		for (j = 0; j <= 9; j++)a
+		for (j = 0; j <= 9; j++)
 		{
 			if (a[j] == s[i])
 				s[i] = b[j];
