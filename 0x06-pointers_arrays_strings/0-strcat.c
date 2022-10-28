@@ -2,8 +2,8 @@
 
 /**
  * _strcat - concatenates two strings
- * @dest: copy character to
- * @scr: copy character from
+ * @dest: copy to
+ * @scr: copy from
  *
  * Return: pointer to dest
  */
