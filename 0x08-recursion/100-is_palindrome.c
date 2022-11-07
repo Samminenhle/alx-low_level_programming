@@ -8,7 +8,7 @@
  *
  * Return: 1 if a string is a palindrome, else 0.
  */
-int palindrome _scanner(char *s, int a, int b)
+int palindrome_scanner(char *s, int a, int b)
 {
 	if (s[a] == s[b])
 		if (a > b / 2)
@@ -29,5 +29,5 @@ int palindrome _scanner(char *s, int a, int b)
 
 int is_palindrome(char *s)
 {
-	return (pal_checker(s, 0, _strlen_recursion(s) - 1));
+	return (palindrome_scanner(s, 0, 1));
 }
