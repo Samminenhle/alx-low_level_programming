@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * scan - checks to see if number is prime
+ * check - checks to see if number is prime
  * @a: integer
  * @b: integer
  *
