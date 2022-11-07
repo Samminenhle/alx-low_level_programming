@@ -19,7 +19,7 @@ int scan(int a, int b)
 }
 
 /**
- * _prime_number - states if the input integer is a prime number
+ * is _prime_number - states if the input integer is a prime number
  * @n: integer
  *
  * Return: returns 1 if the input integer is a prime number,
