@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * check - checks to see if number is prime
+ * scan - scan to see if number is prime
  * @a: integer
  * @b: integer
  *
@@ -15,7 +15,7 @@ int scan(int a, int b)
 	else if (a > b / 2)
 		return (1);
 	else
-		return (check(a + 1, b));
+		return (scan(a + 1, b));
 }
 
 /**
