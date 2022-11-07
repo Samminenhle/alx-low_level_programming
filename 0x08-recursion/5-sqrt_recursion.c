@@ -14,7 +14,7 @@ int check(int i, int j)
 		return (i);
 	if (i * i > j)
 		return (-1);
-	return (check(a + 1, b));
+	return (check(i + 1, j));
 }
 
 /**
