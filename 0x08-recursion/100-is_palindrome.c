@@ -20,7 +20,7 @@ int palindrome_scanner(char *s, int a, int b)
 }
 
 /**
- * is_palindrome - scans if a string is palidromic 
+ * is_palindrome - scans if a string is palidromic
  * @s: string
  *
  * Return: 1 if a string is a palindrome and
