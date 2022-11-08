@@ -6,7 +6,8 @@
  * which contains a copy of the string given as a parameter.
  * @str: string
  *
- * Return: returns a pointer to a new string which is a duplicate of the string str
+ * Return: returns a pointer to a new string
+ * which is a duplicate of the string str
  */
 
 char *_strdup(char *str)
