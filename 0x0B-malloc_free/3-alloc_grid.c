@@ -10,7 +10,7 @@
  * If width or height is 0 or negative, return NULL
  */
 
-int **alloc_grid(int width, int height);
+int **alloc_grid(int width, int height)
 {
 	int **array, a, b;
 	int len = width * height;
