@@ -10,7 +10,7 @@
  * Return: Always 0
  */
 
-int man(void)
+struct dog
 {
 	char* name;
 	float age;
