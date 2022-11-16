@@ -2,7 +2,6 @@
 
 /**
  * main - prints the name of the file it was compiled from
- * samminenhle
  *
  * Return: Always 0
  */
