@@ -9,6 +9,6 @@
 
 int main(void)
 {
-	Iprintf("%s\n",_FILE_);	
+	Iprintf("%s\n",_samminenhle_);	
 		return (0);
 }
