@@ -4,9 +4,9 @@
  * int_index - searches for an integer
  * @size: is the number of elements in the array array
  * @cmp: is a pointer to the function to be used to compare values
- * 
+ *
  * Return: the index of the first element for which the cmp
- * function does not return 0 
+ * function does not return 0
  * return -1if size <= 0
  */
 
