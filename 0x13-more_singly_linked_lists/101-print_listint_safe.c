@@ -10,16 +10,23 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-	listint_t *prev = NULL, *next;
+	int pdiff, count, a;
 
-	if (head == NULL || *head == NULL)
-		return (NULL);
-	for (next = (*head)->next; next; next = (*head)->next)
+	if (head == NULL)
+		return (0);
+	for (count = 0; head; count++)
 	{
-		(*head)->next = prev;
-		prev = *head;
-		*head = next;
+		pdiff = head - head->next;
+		printf("[%p] %d\n", (void *)head, head->n);
+		if (pdiff > 0)
+			head = head->next;
+		else
+		{
+			a = (head->next)->n;
+			printf("-> [%p] %d\n", (void *)head->next, a);
+			count++;
+			break;
+		}
 	}
-	(*head)->next = prev;
-	return (*head);
+	return (count);
 }
