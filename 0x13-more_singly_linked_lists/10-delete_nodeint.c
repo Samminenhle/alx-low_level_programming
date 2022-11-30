@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 /**
- * delete_nodeint_at_index - deletes the node at index index of a listint_t linked list.
+ * delete_nodeint_at_index - deletes the node at index index
+ * of a listint_t linked list.
  * @head: a pointer to the first struct in a linked list
  * @index: the lndex at which to delete the node
  *
