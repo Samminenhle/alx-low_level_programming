@@ -4,6 +4,7 @@
  * int set_bit - sets the value of a bit to 1 at a given index.
  * @n: integer
  * @index: bit index
+ * Description: gives a value of a bit
  *
  * Return: 1 if it worked, or -1 if an error occurred
  */
