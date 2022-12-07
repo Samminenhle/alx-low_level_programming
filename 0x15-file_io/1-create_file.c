@@ -3,7 +3,7 @@
 /**
  * int create_file - creates a file
  * @filename: is the name of the file to create
- * @text: text_content is a NULL terminated string to write to the file
+ * @text_content: is a NULL terminated string to write to the file
  *
  * Return: 1 on success, -1 on failure
  * if filename is NULL return -1
