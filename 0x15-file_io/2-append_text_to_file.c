@@ -1,5 +1,20 @@
 #include "main.h"
 
+/**
+ * _strlen - finds the length of a string
+ * @str: string
+ *
+ * Return: length of the string
+ */
+size_t _strlen(char *str)
+{
+	size_t i;
+
+	for (i = 0; str[i]; i++)
+		;
+	return (i);
+}
+
  /**
   * append_text_to_file - appends text at the end of a file.
   * @filename: file name
@@ -27,20 +42,4 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (len == -1)
 		return (-1);
 	return (1);
-}
-
-/**
- * _strlen - finds the length of a string
- * @s: string
- *
- * Return: length of the string
- */
-
-int _strlen(const char *s)
-{
-	int len = 0;
-
-	while (s[len] != '\0')
-		len++;
-	return (len);
 }
