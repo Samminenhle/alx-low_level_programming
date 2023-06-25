@@ -2,12 +2,12 @@
 
 /**
  * main - print name 
- * @argc: argument v
+ * @argc: argument count
  *
  * Return: void
  */
 
-int main(int arg, char **argv)
+int main(int argc, char **argv)
 {
 	(void)argc;
 

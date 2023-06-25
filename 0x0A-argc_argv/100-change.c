@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 	char *p;
 	int cents[] = {25, 10, 5, 2};
 
-	if (arg != 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
@@ -28,9 +28,9 @@ int main(int argc, char **argv)
 
 	if (!*p)
 	{
-		while  (total >1)
+		while  (total >0)
 		{
-			for (i = 0; i < sizeof(cents[i]); i++)
+			for (i = 0; i < sizeof(cents / sizeof(cents[0]); i++)
 			{
 				if  (total >= cents[i])
 				{
@@ -39,14 +39,13 @@ int main(int argc, char **argv)
 				}
 			}
 		}
-		if (total == 1)
-			count++;
+		printf("%d\n", cont);
 	}
 	else
 	{
 		printf("Error\n");
 		return (1);
 	}
-	printf("%d\n", count);
-	return (1);
+
+	return (0);
 }
