@@ -1,0 +1,24 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "lists.h"
+
+/**
+ * print_listint - Prints alla the elements of alistint_t list
+ * @h: Head
+ *
+ * Return: The number of nodes
+ */
+
+size_t print_listint(const listint_t *h)
+{
+	int a;
+
+	if (h == NULL)
+		return (0);
+	for (a = 0; h; a++)
+	{
+		printf("%d\n", h->n);
+		h = h->next;
+	}
+	return (a);
+}
