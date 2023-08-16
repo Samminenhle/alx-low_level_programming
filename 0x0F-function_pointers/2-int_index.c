@@ -1,33 +1,26 @@
-#include "3-calc.h"
-#include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
+#include "function_pointers.h"
 
 /**
- * get_op_func - selects the correct function
- * to perform the operation asked by the user
- * @s: character
+ * int_index - finds an int
+ * @array: array
+ * @size: array size
+ * @cmp: pointer to compare function
  *
- * Return: 0
+ * Return: firt element if cmp not 0
+ * if no element matches and size <= 0, return -1
  */
-int (*get_op_func(char *s))(int, int)
+int int_index(int *array, int size, int (*cmp)(int))
 {
-        op_t ops[] = {
-                { "+", op_add },
-                { "-", op_sub },
-                { "*", op_mul },
-                { "/", op_div },
-                { "%", op_mod },
-                { NULL, NULL }
-        };
-        int i = 0;
+	int x;
 
-        while (i < 5)
-        {
-                if (strcmp(s, ops[i].op) == 0)
-                        return (ops[i].f);
-
-                i++;
+	if (array && cmp)
+	{
+		for (x = 0; x < size; x++)
+		{
+			if (cmp(array[x]) != 0)
+				return (x);
+		}
 	}
-
-	return (0);
+	return (-1);
 }
