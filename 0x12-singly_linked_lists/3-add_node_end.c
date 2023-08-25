@@ -3,54 +3,44 @@
 #include "lists.h"
 
 /**
- * _strlen - adds a new node at the end of a list_t list
- * @str: string to find the length
+ * add_node_end - Add a new node at the end
+ * @head: Pointer first node
+ * @str: String
  *
- * Return: the address of the new element, or NULL if it failed
+ * Return: Node at end
  */
-
-unsigned int _strlen(char *str)
-{
-	unsigned int i;
-
-	for (i =0; str[i]; i++)
-		;
-	return (i);
-}
-
-/**
- * add_node_end - adds a new node at the end of a list_t list
- * @head: pointer
- * @str: string
- *
- * Return: the address of the new element, or NULL if failed
- */
-
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new, *tmp;
+	list_t *temp, *temp2;
+	unsigned int length = 0;
 
 	if (str == NULL)
 		return (NULL);
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
+
+	temp = malloc(sizeof(list_t));
+	if (temp == NULL)
 		return (NULL);
-	new->str = strdup(str);
-	if (new->str == NULL)
+
+	temp->str = strdup(str);
+	if (temp->str == NULL)
 	{
-		free(new);
+		free(temp);
 		return (NULL);
 	}
-	new->len = _strlen(new->str);
-	new->next = NULL;
+	while (str[length])
+		length++;
+	temp->len = length;
+	temp->next = NULL;
+
 	if (*head == NULL)
 	{
-		*head = new;
-		return (new);
+		*head = temp;
+		return (temp);
 	}
-	tmp = *head;
-	while (tmp->next)
-		tmp = tmp->next;
-	tmp->next = new;
-	return (new);
+
+	temp2 = *head;
+	while (temp2->next)
+		temp2 = temp2->next;
+	temp2->next = temp;
+	return (temp);
 }
