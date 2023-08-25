@@ -1,21 +1,19 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
 
 /**
- * free_list - frees a list_t list
- * @head: a pointer
- *
- * Return: 0
+ * free_list - frees list
+ * @head: First node
  */
-
 void free_list(list_t *head)
 {
-	if (head)
+	list_t *temp;
+
+	while (head)
 	{
-		free_list(head->next);
-		if (head->str)
-			free(head->str);
+		temp = head->next;
+		free(head->str);
 		free(head);
+		head = temp;
 	}
 }
