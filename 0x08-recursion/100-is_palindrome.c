@@ -1,33 +1,44 @@
 #include "main.h"
 
 /**
- * palindrome_scanner - sans if a string is palindromic
+ * _strlen_recursion - returns the length of a string.
  * @s: string
- * @a: left index
- * @b: right index
- *
- * Return: 1 if a string is a palindrome, else 0.
+ * Return: the length of a string.
  */
-int palindrome_scanner(char *s, int a, int b)
+int _strlen_recursion(char *s)
 {
-	if (s[a] == s[b])
-		if (a > b / 2)
-			return (1);
-		else
-			return (palindrome_scanner(s, a + 1, b - 1));
-	else
+	if (*s == '\0')
 		return (0);
+	else
+		return (1 + _strlen_recursion(s + 1));
 }
 
 /**
- * is_palindrome - scans if a string is palidromic
+ * comparator - compares each character of the string.
  * @s: string
- *
- * Return: 1 if a string is a palindrome and
- * otherwise 0
+ * @n1: smallest iterator.
+ * @n2: biggest iterator.
+ * Return: .
  */
+int comparator(char *s, int n1, int n2)
+{
+	if (*(s + n1) == *(s + n2))
+	{
+		if (n1 == n2 || n1 == n2 + 1)
+			return (1);
+		return (0 + comparator(s, n1 + 1, n2 - 1));
+	}
+	return (0);
+}
 
+/**
+ * is_palindrome - detects if a string is a palindrome.
+ * @s: string.
+ * Return: 1 if s is a palindrome, 0 if not.
+ */
 int is_palindrome(char *s)
 {
-	return (palindrome_scanner(s, 0, 1));
+	if (*s == '\0')
+		return (1);
+	return (comparator(s, 0, _strlen_recursion(s) - 1));
 }
