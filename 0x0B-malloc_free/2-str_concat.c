@@ -1,54 +1,43 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
- * _strlen - calculates the length of a sting
- * @s: string
+ * str_concat - concatenates two strings.
+ * @s1: first string.
+ * @s2: second string.
  *
- * Return: length of s
+ * Return: pointer of an array of chars
  */
-
-int _strlen(char *s)
-{
-	int len, i;
-
-	len = 0;
-
-	for (i = 0; s[i] != '\0'; i++)
-		len++;
-	return (len);
-}
-
-/**
- * str_concat - concatenates two strings
- * @s1: first string
- * @s2: second string
- *
- * Return: concatenated string
- */
-
 char *str_concat(char *s1, char *s2)
 {
-	char *concat_str;
-	int len_concat_str, i;
-
-	len_concat_str = _strlen(s1) + _strlen(s2);
-
-	concat_str = malloc(sizeof(char) * len_concat_str + 1);
+	char *strout;
+	unsigned int i, j, k, limit;
 
 	if (s1 == NULL)
 		s1 = "";
-
 	if (s2 == NULL)
 		s2 = "";
 
-	if (concat_str == NULL)
+	for (i = 0; s1[i] != '\0'; i++)
+		;
+
+	for (j = 0; s2[j] != '\0'; j++)
+		;
+
+	strout = malloc(sizeof(char) * (i + j + 1));
+
+	if (strout == NULL)
+	{
+		free(strout);
 		return (NULL);
+	}
 
-	for (i = 0; i < _strlen(s1); i++)
-		concat_str[i] = s1[i];
+	for (k = 0; k < i; k++)
+		strout[k] = s1[k];
 
-	for (i = 0; i < _strlen(s2); i++)
-		concat_str[_strlen(s1) + i] = s2[i];
+	limit = j;
+	for (j = 0; j <= limit; k++, j++)
+		strout[k] = s2[j];
 
-	return (concat_str);
+	return (strout);
 }
