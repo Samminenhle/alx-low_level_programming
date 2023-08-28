@@ -3,22 +3,23 @@
 #include "lists.h"
 
 /**
- * print_listint - Prints all the elements of a listint_t list
- * @h: Head
+ * print_listint - Prints singly linked list
+ * @h: Pointer
  *
- * Return: The number of nodes
- */
+ * Return: List
+ **/
 
 size_t print_listint(const listint_t *h)
 {
-        int a;
+	const listint_t *ptr;
+	unsigned int x = 0;
 
-        if (h == NULL)
-                return (0);
-        for (a = 0; h; a++)
-        {
-                printf("%d\n", h->n);
-                h = h->next;
-        }
-        return (a);
+	ptr = h;
+	while (ptr)
+	{
+		printf("%d\n", ptr->n);
+		x++;
+		ptr = ptr->next;
+	}
+	return (x);
 }
